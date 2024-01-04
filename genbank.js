@@ -262,7 +262,7 @@ function parseLocation(location) {
 
         var startEndMatch = location.replace(/[<>]/g, '').match(/^([0-9]+)\.\.([0-9]+)$/);
 
-        if ( startEndMatch == null && location.match(/^([0-9]+)$/) ){
+        if ( startEndMatch == null && location.match(/([0-9]+)/) ){
             return {
                 start: parseInt(location),
                 end: parseInt(location),
