@@ -190,7 +190,7 @@ exports.parseGBF = function parseGBF(gbf) {
 
                         qualifier = qualifierLine.split('=')[0];
  
-                        var value = qualifierLine.split('"')[1];
+                        var value = qualifierLine.split('=')[1][0] === '"' ? qualifierLine.split('"')[1] : qualifierLine.split('=')[1];
 
                         if(!f[qualifier])
                             f[qualifier] = [ value ]
